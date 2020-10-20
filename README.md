@@ -15,7 +15,7 @@ docker run -it --rm -p5900:5900 \
     kastaneda/p24_sandbox
 ```
 
-And then run `vncaviewer 127.0.0.1`
+And then run `vncviewer 127.0.0.1`
 
 
 ## Security note
