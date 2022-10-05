@@ -8,6 +8,8 @@ RUN apt-get -q update && \
         libgtk2.0-common libpcsclite1 libusb-1.0-0 pcscd && \
     dpkg -i /root/cryptoplugin-1.2.2-all.deb && \
     apt-get clean && \
+    ln -sf /usr/share/zoneinfo/Europe/Kiev /etc/localtime && \
+    dpkg-reconfigure --frontend noninteractive tzdata && \
     rm -rf /var/cache/* /var/log/apt/* /var/lib/apt/lists/* /tmp/*
 
 # Same entry point as kastaneda/vnc_x11 image use
