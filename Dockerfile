@@ -1,7 +1,7 @@
 FROM kastaneda/vnc_x11
 
 USER root
-ADD https://cb.privatbank.ua/p24-cryptoplugin/1.2.2/cryptoplugin-1.2.2-all.deb /root
+ADD cryptoplugin-1.2.2-all.deb /root
 RUN apt-get -q update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -qy \
         libccid libgail-common libgail18 libgtk2.0-0 libgtk2.0-bin \
